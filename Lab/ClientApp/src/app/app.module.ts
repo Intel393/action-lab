@@ -5,8 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import {PanelModule} from "primeng/panel";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { PanelModule } from "primeng/panel";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { AppStateModule } from './app-state/app-state.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' }
     ]),
-    PanelModule
+    PanelModule,
+    AppStateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
